@@ -1,0 +1,126 @@
+body{
+    background-color: #2b2b2b;
+}
+h1{
+    color: whitesmoke;
+    text-align: center;
+    margin-top: 50px;
+}
+.rower{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    
+}
+
+.contain {
+    flex: 1 1 calc(25% - 10px); /* Four items per row */
+    box-sizing: border-box;
+    background-color: #2b2b2b;
+    padding: 20px;
+    text-align: center;
+}
+
+@media (max-width: 1200px) {
+    .contain {
+        flex: 1 1 calc(33.33% - 10px); /* Three items per row */
+    }
+}
+
+@media (max-width: 900px) {
+    .contain {
+        flex: 1 1 calc(50% - 10px); /* Two items per row */
+    }
+}
+
+@media (max-width: 600px) {
+    .contain {
+        flex: 1 1 100%; /* One item per row */
+    }
+}
+
+
+.contain {
+    z-index: 1;
+    perspective: 3000px;
+    margin: 50px;
+  }
+  
+  .contain .book {
+    position: relative;
+    display: block;
+    width: 210px;
+    height: 300px;
+    margin: 5% auto;
+    border-radius: 2px 4px 4px 2px;
+    background: linear-gradient(45deg, #DAD5DC 0%, #f2ebf4 100%);
+    font-family: acumin-pro, sans-serif;
+    box-shadow: 15px 15px 9px rgba(0, 0, 0, 0.575);
+    font-weight: 400;
+    color: #2b2b2b;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+  }
+  
+  .contain .book:hover {
+    transform: rotate3d(0, 1, 0, 35deg);
+  }
+  
+  .contain .front {
+    transform-style: preserve-3d;
+    transform-origin: 0% 50%;
+    transition: transform 0.5s;
+    transform: translate3d(0, 0, 20px);
+    z-index: 10;
+  }
+  
+  .contain .front > div {
+    width: 210px;
+    height: 300px;
+  }
+  
+  .contain .left-side {
+    width: 40px;
+    left: -20px;
+    height: 300px;
+    background-color: rgb(87, 84, 84);
+    transform: rotate3d(0, 1, 0, -90deg);
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .contain .left-side h2 {
+    transform: rotate(90deg) translateY(-0px);
+    width: 150px;
+    text-align: center;
+    margin: 0;
+    font-family: acumin-pro, sans-serif;
+    font-weight: 400;
+    opacity: 0.8;
+  }
+  
+  .contain .cover {
+    background: linear-gradient(45deg, #DAD5DC 0%, #f2ebf4 100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 210px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .author {
+    font-family: acumin-pro, sans-serif;
+    font-weight: 400;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    opacity: 0.8;
+  }
+  

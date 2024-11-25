@@ -1,0 +1,64 @@
+<% layout("/boilerplate.ejs") %>
+<link rel="stylesheet" href="/show.css">
+<link rel="stylesheet" href="/show-style.css">
+<link rel="stylesheet" href="/star.css">
+        <div class="page">
+            <div class="book">
+                <div class="image">
+                    <div class="contain">
+                    <div class="book">
+                      <div class="front">
+                        <div class="cover" style="background: url('<%= book.imageLinks.thumbnail %>'); background-size: cover; background-position: center;">
+                          <p class="author"></p>
+                        </div>
+                      </div>
+                      <div class="left-side">
+                        <h2 style="font-size: 20px;">
+                          <span><h5 style="color: white;"> <%= book.language %></h5></span>
+                        </h2>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <% if (book.averageRating) { %>
+                  <p class="starability-result" data-rating="<%= book.averageRating %>" style="color: white; margin-left: 100px; margin-bottom: 50px;">
+                    
+                  </p>
+                <% } else { %>
+                  <p  style="color: white; text-align: center; ">
+                    No rating available
+                  </p>
+                <% } %>
+
+                <div class="preview">
+                  <a class="btn" href="<%= book.previewLink %>">PREVIEW BOOK</a>
+                </div>
+            </div>
+            <div class="info">
+                <div class="title"><h1><%= book.title %></h1></div>
+                <div class="description"><%= book.description %></div>
+                <div class="publisher"><%= book.publisher %></div>
+            </div>
+            <div class="features">
+                <div class="id">
+                  <i class="fa-solid fa-book i"></i>
+                  <h4><%= book.id %></h4>
+                </div>
+                <div class="pages">
+                  <i class="fa-solid fa-file i"></i>
+                  <h4><%= book.pageCount %> pages</h4>               
+                </div>
+                <div class="pub-date">
+                  <i class="fa-regular fa-calendar-days i"></i>
+                  <h4><%= book.publishedDate %></h4>
+                </div>
+                <div class="ratingsCount">
+                  <i class="fa-solid fa-star i"></i>
+                  <h4><%= book.ratingsCount %> ratingCount</h4>
+                </div>
+            </div>
+        </div>
+        <div class="div">
+
+        </div>
+

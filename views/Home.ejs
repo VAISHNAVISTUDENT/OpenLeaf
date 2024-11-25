@@ -1,0 +1,183 @@
+<% layout("/boilerplate.ejs") %>
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/star.css">
+
+<body>
+
+  
+        <h1>Harry Potter</h1>
+        <div class="rower">
+          <% for(let book of harryPotter) { %>
+            <div class="full-book">
+              <form action="/getBooks/<%= book.id %>" method="GET">
+                <Button type="submit" style="background-color: #2b2b2b; border: none;">
+                  <div class="contain">
+                    <div class="book">
+                      <div class="front">
+                        <div class="cover" style="background: url('<%= book.imageLinks.thumbnail %>'); background-size: cover; background-position: center; ">
+                          <p class=author></p>
+                        </div>
+                      </div>
+                      <div class="left-side">
+                        <h2 style="font-size: 20px;">
+                          <span></span>
+                        </h2>
+                      </div>
+                    </div>
+                  </div>
+                </Button>
+              </form>
+               
+              <% if (book.averageRating) { %>
+                <p class="starability-result" data-rating="<%= book.averageRating %>" style="color: white; margin-left: 100px; margin-bottom: 50px;">
+                  
+                </p>
+              <% } else { %>
+                <p  style="color: white; text-align: center; ">
+                  No rating available
+                </p>
+              <% } %>
+            </div>
+          <% } %>
+      </div>
+      <h1>Twilight</h1>
+    <div class="rower">
+      <% for(let book of Twilight) { %>
+        <div class="full-book">
+          <form action="/getBooks/<%= book.id %>" method="GET">
+            <Button type="submit" style="background-color: #2b2b2b; border: none;">
+              <div class="contain">
+                <div class="book">
+                  <div class="front">
+                    <div class="cover" style="background: url('<%= book.imageLinks.thumbnail %>'); background-size: cover; background-position: center; ">
+                      <p class=author></p>
+                    </div>
+                  </div>
+                  <div class="left-side">
+                    <h2 style="font-size: 20px;">
+                      <span></span>
+                    </h2>
+                  </div>
+                </div>
+              </div>
+            </Button>
+          </form>
+          
+          <% if (book.averageRating) { %>
+            <p class="starability-result" data-rating="<%= book.averageRating %>" style="color: white; margin-left: 100px; margin-bottom: 50px;">
+              
+            </p>
+          <% } else { %>
+            <p  style="color: white; text-align: center; ">
+              No rating available
+            </p>
+          <% } %>
+        </div>
+      <% } %>
+  </div>
+    <h1>Berenstain Bears</h1>
+    <div class="rower">
+      <% for(let book of BerenstainBears) { %>
+        <div class="full-book">
+          <form action="/getBooks/<%= book.id %>" method="GET">
+            <Button type="submit" style="background-color: #2b2b2b; border: none;">
+              <div class="contain">
+                <div class="book">
+                  <div class="front">
+                    <div class="cover" style="background: url('<%= book.imageLinks.thumbnail %>'); background-size: cover; background-position: center; ">
+                      <p class=author></p>
+                    </div>
+                  </div>
+                  <div class="left-side">
+                    <h2 style="font-size: 20px;">
+                      <span></span>
+                    </h2>
+                  </div>
+                </div>
+              </div>
+            </Button>
+          </form>
+           
+          <% if (book.averageRating) { %>
+            <p class="starability-result" data-rating="<%= book.averageRating %>" style="color: white; margin-left: 100px; margin-bottom: 50px;">
+              
+            </p>
+          <% } else { %>
+            <p  style="color: white; text-align: center; ">
+              No rating available
+            </p>
+          <% } %>
+        </div>
+      <% } %>
+  </div>
+    <h1>Nancy Drew</h1>
+    <div class="rower">
+      <% for(let book of NancyDrew) { %>
+        <div class="full-book">
+          <form action="/getBooks/<%= book.id %>" method="GET">
+            <Button type="submit" style="background-color: #2b2b2b; border: none;">
+              <div class="contain">
+                <div class="book">
+                  <div class="front">
+                    <div class="cover" style="background: url('<%= book.imageLinks.thumbnail %>'); background-size: cover; background-position: center; ">
+                      <p class=author></p>
+                    </div>
+                  </div>
+                  <div class="left-side">
+                    <h2 style="font-size: 20px;">
+                      <span></span>
+                    </h2>
+                  </div>
+                </div>
+              </div>
+            </Button>
+          </form>
+
+          <% if (book.averageRating) { %>
+            <p class="starability-result" data-rating="<%= book.averageRating %>" style="color: white; margin-left: 100px; margin-bottom: 50px;">
+              
+            </p>
+          <% } else { %>
+            <p  style="color: white; text-align: center; ">
+              No rating available
+            </p>
+          <% } %>
+        </div>
+      <% } %>
+  </div>
+  <h1>A Song of Ice and Fire</h1>
+    <div class="rower">
+      <% for(let book of ASongofIceandFire) { %>
+        <div class="full-book">
+          <form action="/getBooks/<%= book.id %>" method="GET">
+            <Button type="submit" style="background-color: #2b2b2b; border: none;">
+              <div class="contain">
+                <div class="book">
+                  <div class="front">
+                    <div class="cover" style="background: url('<%= book.imageLinks.thumbnail %>'); background-size: cover; background-position: center; ">
+                      <p class=author></p>
+                    </div>
+                  </div>
+                  <div class="left-side">
+                    <h2 style="font-size: 20px;">
+                      <span></span>
+                    </h2>
+                  </div>
+                </div>
+              </div>
+            </Button>
+          </form>
+
+          <% if (book.averageRating) { %>
+            <p class="starability-result" data-rating="<%= book.averageRating %>" style="color: white; margin-left: 100px; margin-bottom: 50px;">
+              
+            </p>
+          <% } else { %>
+            <p  style="color: white; text-align: center; ">
+              No rating available
+            </p>
+          <% } %>
+        </div>
+      <% } %>
+  </div>
+</body>

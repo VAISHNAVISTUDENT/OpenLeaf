@@ -1,0 +1,46 @@
+.book{
+    width: 30%;
+    height: 100vh;
+    background-color: white;
+}
+.info{
+    width: 50%;
+    height: 100vh;
+    background-color: white;
+}
+.features{
+    width: 20%;
+    height: 100vh;
+    background-color: white;
+}
+.page{
+    display: flex;
+}
+.description{
+    margin:40px ;
+
+}
+.title{
+    text-align: center;
+}
+.features{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+
+}
+
+.i{
+    font-size: 50px;
+    color: gray;
+}
+.div{
+    height: 100px;
+}
+.preview{
+    align-self: center;
+    align-items: center;
+    text-align: center;
+}

@@ -1,0 +1,41 @@
+<% layout("/boilerplate.ejs") %>
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/star.css">
+<body>
+  <div class="rower">
+    <% for (let book of books) { %>
+      <div class="full-book">
+        <form action="/getBooks/<%= book.id %>" method="GET">
+          <Button type="submit" style="background-color: #2b2b2b; border: none;">
+            <div class="contain">
+              <div class="book">
+                <div class="front">
+                  <div class="cover" style="background: url('<%= book.imageLinks.thumbnail %>'); background-size: cover; background-position: center;">
+                    <p class="author"></p>
+                  </div>
+                </div>
+                <div class="left-side">
+                  <h2 style="font-size: 20px;">
+                    <span><h5 style="color: white;"> <%= book.authors %></h5></span>
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </Button>
+  
+          <% if (book.averageRating) { %>
+            <p class="starability-result" data-rating="<%= book.averageRating %>" style="color: white; margin-left: 100px; margin-bottom: 50px;">
+              
+            </p>
+          <% } else { %>
+            <p  style="color: white; text-align: center; ">
+              No rating available
+            </p>
+          <% } %>
+        </form>
+      </div>
+    <% } %>
+  </div>
+  
+    
+</body>
