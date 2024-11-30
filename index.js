@@ -3,7 +3,7 @@ const axios = require('axios');
 const path = require('path')
 const app = express();
 const PORT = 3000;
-const API_KEY = 'your_google_api';  // Replace with your Google Books API key
+const API_KEY = 'AIzaSyC1U2hmesxPE-Q4hF9yifAvWuouBRJ6T1k';  // Replace with your Google Books API key
 const BASE_URL = 'https://www.googleapis.com/books/v1/volumes';
 const ejsMate = require('ejs-mate');
 app.engine("ejs" , ejsMate);
