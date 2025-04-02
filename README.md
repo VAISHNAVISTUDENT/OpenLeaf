@@ -1,0 +1,1 @@
+Designed and developed a book platform using the Google Books API for real-time data retrieval. Implemented a functional search bar and utilized Node.js, Express, and Axios for backend integration. Bootstrap was used for UI.
